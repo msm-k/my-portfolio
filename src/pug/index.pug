@@ -1,9 +1,14 @@
-extends _layout
+//- Specify layout template.
+extends layouts/_layout
+
+//- Declarations
 block title
-  title Gulp Static Starter v4
+  title Web Studio EGG. | Portfolio
+
+//- Following are contents of inner body.
 block content
-  .wrapper
-    div
-      h1 Gulp 4.0 
-      include include/_includetest.pug
-    img(src="./img/logo.png", alt="logo" width=100)
+  .top.top__bg
+    .top__title-wrap
+      h1.top__title Masami Kawabata
+      p.top__text dummytextdummytextdummytextdummytextdummytextdummytextdummytextdummytextdummytext.
+    .top__images
