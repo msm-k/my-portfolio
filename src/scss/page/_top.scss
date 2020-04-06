@@ -1,25 +1,11 @@
+// ==========================================================================//
+//
+// Page Layout
+//
+// ==========================================================================//
+
 .top {
-  position: relative;
   width: 100%;
-
-  &__bg {
-    background-color: #9aa1ae;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
-    &:after {
-      content: '';
-      position: absolute;
-      right: -580px;
-      color: #fff;
-      margin: 0 auto;
-      height: 1000px;
-      background-color: #404456;
-      transform: rotate(-60deg) translate3d(0, 0, 0);
-      width: 1200px;
-    }
-  }
 
   &__title-wrap {
     position: absolute;
