@@ -7,13 +7,81 @@ block title
 
 //- Following are contents of inner body.
 block content
+  include partials/_footer.pug
   .top
     .bg
       .bg__line
       .bg__line
       .bg__line
 
-    .top__title-wrap
-      h1.top__title Web Studio EGG.
-      p.top__text dummytextdummytextdummytextdummytextdummytextdummytextdummytextdummytextdummytext.
-    .top__images
+    .top__mainvisual
+      .top__title-wrap
+        h1.top__title Web Studio EGG.
+        p.top__text
+          | WEB DESIGN / WEB CODING / 
+          br
+          | If you have any cool projects or opportunities, please get in touch!
+      .top__button-wrap
+        a(href="").top__viewmore View More
+
+    section.top__content-wrap
+      h2.top__subtitle PRINCIPLE
+        span.top__subtitle-small 方針・コンセプト
+      .top__content
+        p.top__content-text
+          | ウェブデザイナーです。
+          br
+          | サイト設計からコーディングまで対応いたします。
+
+    section.top__content-wrap
+      h2.top__subtitle SERVICE
+        span.top__subtitle-small サービス
+        p.top__content-text
+      .top__content
+        .top__content-list
+          .top__content-item
+            img(src="./img/icon_direction.png").top__service-image
+            h3.top__service-title DIRECTION
+            p.top__service-text 準備中
+          .top__content-item
+            img(src="./img/icon_design.png").top__service-image
+            h3.top__service-title DESIGN
+            p.top__service-text 準備中
+          .top__content-item
+            img(src="./img/icon_coding.png").top__service-image
+            h3.top__service-title CODING
+            p.top__service-text 準備中
+
+    section.top__content-wrap
+      h2.top__subtitle BLOG
+        span.top__subtitle-small ブログ
+      .top__content
+        .top__content-list
+          .top__content-item
+            .top__blog-image
+              img(src="./img/blog_skill_002.jpg" alt="")
+            h3 準備中
+            p.top__blog-text 準備中
+          .top__content-item
+            .top__blog-image
+              img(src="./img/blog_skill_001.jpg" alt="")
+            h3 準備中
+            p.top__blog-text 準備中
+          .top__content-item
+            .top__blog-image
+              img(src="./img/blog_life_001.jpg" alt="")
+            h3 準備中
+            p.top__blog-text 準備中
+
+    section.top__content-wrap
+      h2.top__subtitle About Me
+        span.top__subtitle-small 私について
+      .top__content
+        p.top__content-text
+          | 1994年 文京区生まれ 浅草育ち
+          br
+          | 東京都在住、フリーランスのデザイナー兼デベロッパー。
+        a(href="").button-normal View More
+
+  include partials/_footer.pug
+  

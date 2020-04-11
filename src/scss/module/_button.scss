@@ -1,0 +1,19 @@
+.button-normal {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #fff;
+  margin-top: 72px;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+}
+
+.button-normal:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  width: 60px;
+  height: 1px;
+  background-color: #fff;
+}

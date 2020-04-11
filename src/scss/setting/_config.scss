@@ -2,10 +2,19 @@
 $breakPointList: 767px, 768px;
 
 //メディアクエリ
-$mq: (
-  'sp': 'screen and (max-width: #{nth($breakPointList, 1)})',
-  'pc': 'print,screen and (min-width: #{nth($breakPointList, 2)})'
-) !default;
+$mq-breakpoints: (
+  'xsmall': 320px,
+  'small' : 600px,
+  'medium': 768px,
+  'large' : 1024px,
+  'xlarge': 1280px,
+);
+
+@mixin mq($breakpoint: medium) {
+  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
 
 //画像格納ディレクトリ
 $imgDir: '/img/';

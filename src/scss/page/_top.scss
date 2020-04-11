@@ -5,33 +5,162 @@
 // ==========================================================================//
 
 .top {
+  position: relative;
   width: 100%;
+  padding: 0 20px;
+
+  &__mainvisual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: $minPcContentWidth;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 200px 0;
+  }
+
+  &__content-wrap {
+    max-width: $minPcContentWidth;
+    margin: 0 auto;
+    padding: 200px 0;
+  }
+
+  &__content {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  &__content-text {
+    max-width: 560px;
+    margin: 72px auto 0;
+    line-height: 3;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  &__content-list {
+    display: flex;
+    @include mq() {
+      flex-direction: column;
+    }
+  }
+
+  &__content-item {
+    width: calc(100%/3);
+    & + & {
+      margin-left: 48px;
+    }
+    @include mq() {
+      width: 100%;
+      & + & {
+        margin: 40px 0 0;
+      }
+    }
+  }
+
+  &__content-title {
+    text-align: center;
+    padding: 24px 0
+  }
 
   &__title-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 1000;
   }
 
   &__title {
-    text-align: center;
     color: #fff;
     letter-spacing: 0.08em;
     font-size: 4.8rem;
   }
 
+  &__subtitle {
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 2.8rem;
+  }
+
+  &__subtitle-small {
+    margin-top: 8px;
+    display: block;
+    font-size: 1.2rem;
+  }
+
   &__text {
     margin-top: 12px;
-    color: #fff;
     font-size: 1.4rem;
   }
 
   &__images {
     position: absolute;
     left: 10%;
-    
+  }
+
+  &__button-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  &__viewmore {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px 60px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  &__viewmore:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 40px;
+    background-color: #fff;
+  }
+
+
+  // Service
+  &__service-title {
+    text-align: center;
+    padding: 24px 0;
+    letter-spacing: 0.18em;
+  }
+
+  &__service-text {
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+  }
+
+  &__service-image {
+    width: calc(100%/2);
+    height: auto;
+  }
+
+  // Blog
+  &__blog-image {
+    text-align: center;
+    padding: 24px 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__blog-text {
+    margin-top: 16px;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
   }
 
 }
+
